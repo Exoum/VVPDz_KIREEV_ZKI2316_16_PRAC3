@@ -1,3 +1,15 @@
+from typing import List
+
+def syracuse_sequence(n: int) -> List[int]:
+    sequence = [n]
+    while n != 1:
+        if n % 2 == 0:
+            n //= 2
+        else:
+            n = 3 * n + 1
+        sequence.append(n)
+    return sequence
+
 def main():
     while True:
         print("\nСиракузская последовательность")
