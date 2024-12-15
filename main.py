@@ -10,6 +10,14 @@ def syracuse_sequence(n: int) -> List[int]:
         sequence.append(n)
     return sequence
 
+def syracuse_max(n: int) -> int:
+    sequence = syracuse_sequence(n)
+    max_value = sequence[0]
+    for number in sequence:
+        if number > max_value:
+            max_value = number
+    return max_value
+
 def main():
     while True:
         print("\nСиракузская последовательность")
